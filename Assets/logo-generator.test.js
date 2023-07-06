@@ -12,5 +12,5 @@ test('Logo generation', () => {
   expect(fs.existsSync('logo.svg')).toBe(true);
   
   // Check if the output message is correct
-  expect(result.trim()).toBe('Generated logo.svg');
+  expect(result.trim()).toBe('logo.svg');
 });

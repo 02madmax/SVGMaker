@@ -25,12 +25,24 @@ inquirer
     },
   ])
   .then((answers) => {
+    let shapeElement;
+    switch (answers.shape) {
+      case 'circle':
+        shapeElement = `<circle cx="150" cy="100" r="50" fill="${answers.shapeColor}" />`;
+        break;
+      case 'triangle':
+        shapeElement = `<polygon points="150,20 280,180 20,180" fill="${answers.shapeColor}" />`;
+        break;
+      case 'square':
+        shapeElement = `<rect width="150" height="150" x="75" y="25" fill="${answers.shapeColor}" />`;
+        break;
+    }
     // Generate the SVG code based on user input
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-      <rect width="300" height="200" fill="${answers.shapeColor}" />
+      ${shapeElement}
       <text x="50%" y="50%" font-size="72" fill="${answers.textColor}" text-anchor="middle">${answers.text}</text>
     </svg>`;
-
+    
     // Create the logo.svg file
     fs.writeFileSync('logo.svg', svg);
 
