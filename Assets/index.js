@@ -37,6 +37,7 @@ inquirer
         shapeElement = `<rect width="150" height="150" x="75" y="25" fill="${answers.shapeColor}" />`;
         break;
     }
+    
     // Generate the SVG code based on user input
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
       ${shapeElement}
@@ -47,7 +48,8 @@ inquirer
     fs.writeFileSync('logo.svg', svg);
 
     console.log('Generated logo.svg');
-  })
+  }) 
+  
   .catch((error) => {
     console.error(error);
   });

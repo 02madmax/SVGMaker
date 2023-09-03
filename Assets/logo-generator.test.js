@@ -3,14 +3,20 @@ const fs = require('fs');
 
 test('Logo generation', () => {
   // Mock the user input for testing
+  
   const userInput = 'AB\nred\ncircle\nblue\n';
   
-  // Execute the logo-generator.js script with mocked user input
-  const result = execSync(`echo -e "${userInput}" | node logo-generator.js`).toString();
+  // Execute the index.js script with mocked user input
+  const result = execSync('node index.js', {
+    input: userInput,
+  }).toString();
 
   // Check if the logo.svg file was generated
-  expect(fs.existsSync('logo.svg')).toBe(true);
+  const filePath = `${__dirname}/logo.svg`;
+  expect(fs.existsSync(filePath)).toBe(true);
+ 
   
   // Check if the output message is correct
   expect(result.trim()).toBe('logo.svg');
 });
+ 
