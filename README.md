@@ -43,6 +43,7 @@ For additional questions, contact me:
 
 ## Links
 Repository: https://github.com/02madmax/SVGMaker
-Video:
+Demp Video: https://youtu.be/KJoCKIk_rRA
 
 ## SVG Logo example
+![Alt text](Assets/logo.svg)
