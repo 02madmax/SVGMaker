@@ -28,10 +28,11 @@ inquirer
     let shapeElement;
     switch (answers.shape) {
       case 'circle':
-        shapeElement = `<circle cx="150" cy="100" r="50" fill="${answers.shapeColor}" />`;
+        shapeElement = `<circle cx="150" cy="100" r="80" fill="${answers.shapeColor}" />`;
         break;
       case 'triangle':
-        shapeElement = `<polygon points="150,20 280,180 20,180" fill="${answers.shapeColor}" />`;
+        shapeElement = `<polygon points="150,20 280,180 20,180" fill="${answers.shapeColor}" />
+        <text x="150" y="140" font-size="24" text-anchor="middle" fill="white"></text>`;
         break;
       case 'square':
         shapeElement = `<rect width="150" height="150" x="75" y="25" fill="${answers.shapeColor}" />`;

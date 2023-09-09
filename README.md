@@ -15,7 +15,7 @@ An svg logo generator that can be used to make my own logo, that way I don't hav
 
 ## Installation
 
-In order to install this application you will have to pull it or clone it from my git repository provided. You will need to install the npm packages in the package.json file
+In order to install this application you will have to pull it or clone it from my git repository provided. You will need to install the npm packages in the package.json file, specifically inquirer and jest
 
 ## Usage
 
@@ -42,7 +42,7 @@ For additional questions, contact me:
 - Email: maxlamthach10@gmail.com
 
 ## Links
-Repository:
+Repository: https://github.com/02madmax/SVGMaker
 Video:
 
-## Screenshot
+## SVG Logo example
